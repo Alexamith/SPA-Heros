@@ -1,0 +1,20 @@
+import { Component, OnInit } from '@angular/core';
+import { HeroesService } from '../../services/heroes.serive';
+
+@Component({
+  selector: 'app-heroes',
+  templateUrl: './heroes.component.html',
+  styleUrls: ['./heroes.component.css']
+})
+export class HeroesComponent implements OnInit {
+  heroes:any[] = [];
+  constructor(private _heroesService:HeroesService) {
+
+   }
+
+  ngOnInit(): void {
+    this.heroes = this._heroesService.getHeroes();
+    console.log(this.heroes[0].nombre)
+  }
+
+}
