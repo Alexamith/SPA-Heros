@@ -1,7 +1,7 @@
 <h1>Héroes de <small>Marvel y DC</small></h1>
 <hr />
 <div class="row">
-  <div class="col-sm-4" *ngFor="let heroe of heroes" id="targeta">
+  <div class="col-sm-4" *ngFor="let heroe of heroes; let i = index" id="targeta">
     <div class="card-group">
       <div class="card">
         <img src="{{heroe.img}}" class="card-img-top" alt="..." />
@@ -14,7 +14,8 @@
         </div>
         <hr>
         <div class="div-btn">
-            <button class="btn btn-primary" style="width: 90%;" >Ver más.</button>
+            <!-- <button class="btn btn-primary" style="width: 90%;" >Ver más.</button> -->
+            <a [routerLink] ="['/heroe',i]" class="btn btn-primary" style="width: 90%;">Detalles...</a>
         </div>
 
         <div class="card-footer">

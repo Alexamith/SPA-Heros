@@ -54,3 +54,40 @@
 #targeta{
   margin-top: 10px;
 }
+.pertenece img{
+  width: 50%;
+  float: right;
+}
+
+.pertenece h4 {
+  display: inline-block;
+}
+
+.col-md-8 .pertenece, .subtitulo{
+  display: inline-block;
+}
+
+.col-md-8 h3{
+  padding: 5px 0;
+}
+
+.subtitulo{
+  float: left;
+  width: 80%;
+}
+
+.hea{
+  text-align: right;
+}
+
+/* .imgMarvel{
+  width: 50% !important;
+  border: 1px solid black;
+  padding: 0 !important;
+  margin: 0 !important;
+} */
+
+.pertenece{
+  display: inline-block !important;
+  width: 20%;
+}

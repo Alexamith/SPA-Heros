@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-8">
+        <h1>{{heroe.nombre}} <small>{{heroe.aparicion}}</small></h1>
+    </div>
+    <div class="col-md-4 hea">
+        <a [routerLink] = "['/heroes']" class="btn btn-primary" id="btnRegresar">Regresar</a>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="heroe.img" alt="" class="img-fluid">
+        <br><br>
+    </div>
+    <div class="col-md-8">
+        <div class="subtitulo">
+            <h3>{{heroe.nombre}}</h3>
+        </div>
+        <div class="pertenece">
+            <img *ngIf ='!marvel' src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/DC_Comics_logo.png/600px-DC_Comics_logo.png" alt="" class="img-fluid">
+            <img *ngIf ='marvel' src="https://i.pinimg.com/originals/e4/2b/72/e42b72121ac11b1997e99977b21daf2a.jpg" alt="" class="imgMarvel">
+        </div>
+        <hr>
+        <p>
+            {{heroe.bio}}
+        </p>
+        
+    </div>
+</div>
