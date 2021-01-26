@@ -1,0 +1,37 @@
+<h1>Resultados búsqueda Héroes de <small>Marvel y DC</small></h1>
+<hr />
+<div class="row" *ngIf ="heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info" >
+       <p>No existen coincidencias para '{{termino}}'</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4" *ngFor="let heroe of heroes; let i = index" id="targeta">
+    <div class="card-group">
+      <div class="card">
+        <img src="{{heroe.img}}" class="card-img-top" alt="..." />
+        <div class="card-body overflow-auto">
+          <h5 class="card-title">{{heroe.nombre}}</h5>
+         
+          <p class="card-text">
+            {{heroe.bio}}
+          </p>
+        </div>
+        <hr>
+        <div class="div-btn">
+            <!-- <button class="btn btn-primary" style="width: 90%;" >Ver más.</button> -->
+            <a [routerLink] ="['/heroe',i]" class="btn btn-primary" style="width: 90%;">Detalles...</a>
+        </div>
+
+        <div class="card-footer">
+          <small class="text-muted">{{heroe.aparicion}}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+

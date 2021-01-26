@@ -65,4 +65,16 @@ export class HeroesService {
     getHeroe( id:string ){
       return this.heroes[id];
   }
+
+  buscarTexto( texto:string ){
+    let heroesArr:any[] = [];
+    texto = texto.toLowerCase();
+    for(let heroe of this.heroes){
+      let nombre = heroe.nombre.toLowerCase();
+      if(nombre.indexOf(texto) >= 0){
+        heroesArr.push(heroe);
+      }
+    }
+    return heroesArr;
+  }
 }
